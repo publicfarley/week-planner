@@ -1,0 +1,44 @@
+# Xcode
+.DS_Store
+*.xcodeproj/*.pbxuser
+*.xcodeproj/*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Build artifacts
+build/
+DerivedData/
+*.xcarchive
+*.ipa
+*.dSYM.zip
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# CocoaPods
+Pods/
+.symlinks/
+# Podfile.lock # Uncomment if you want to ignore Podfile.lock
+
+# Carthage
+Carthage/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Other
+.fseventsd/
+.Spotlight-V100/
+.Trashes/
+Icon?
+.TemporaryItems/
+.ContentCaching/
+.DocumentRevisions-V100/
+.localized
+.idea/ # For AppCode or other JetBrains IDEs
