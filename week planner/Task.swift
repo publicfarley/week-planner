@@ -8,6 +8,7 @@ final class Task: Identifiable {
     var title: String
     var completed: Bool
     var dueDate: Date
+    var goal: Goal?
 
     init(title: String, completed: Bool = false, dueDate: Date) {
         self.id = UUID().uuidString
