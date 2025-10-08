@@ -11,7 +11,14 @@ struct TaskListView: View {
         NavigationSplitView {
             List {
                 ForEach(tasks) { task in
-                    Text(task.title)
+                    VStack(alignment: .leading) {
+                        Text(task.title)
+                        if let goal = task.goal {
+                            Text(goal.title)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
                 }
                 .onDelete(perform: deleteItems)
             }
