@@ -21,5 +21,23 @@ struct TaskRowView: View {
                 Text("")
             }
         }
+        .contextMenu {
+            Button(action: {
+                move(days: -1)
+            }) {
+                Text("Move to Previous Day")
+                Image(systemName: "arrow.left")
+            }
+            Button(action: {
+                move(days: 1)
+            }) {
+                Text("Move to Next Day")
+                Image(systemName: "arrow.right")
+            }
+        }
+    }
+
+    private func move(days: Int) {
+        task.dueDate = Calendar.current.date(byAdding: .day, value: days, to: task.dueDate)!
     }
 }
