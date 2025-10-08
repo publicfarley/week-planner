@@ -12,7 +12,7 @@ import SwiftData
 struct week_plannerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
         .modelContainer(for: [Task.self, Goal.self])
     }
