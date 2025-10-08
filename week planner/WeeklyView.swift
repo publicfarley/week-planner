@@ -11,7 +11,9 @@ struct WeeklyView: View {
                 ForEach(0..<7) { day in
                     Section(header: Text(dayOfWeek(day: day))) {
                         ForEach(tasks(for: day)) { task in
-                            TaskRowView(task: task)
+                            NavigationLink(destination: EditTaskView(task: task)) {
+                                TaskRowView(task: task)
+                            }
                         }
                     }
                 }
