@@ -4,6 +4,7 @@ import SwiftData
 
 struct WeeklyView: View {
     @Query private var tasks: [Task]
+    @State private var showingAddTask = false
 
     var body: some View {
         NavigationSplitView {
@@ -19,6 +20,16 @@ struct WeeklyView: View {
                 }
             }
             .navigationTitle("Weekly View")
+            .toolbar {
+                ToolbarItem {
+                    Button(action: { showingAddTask.toggle() }) {
+                        Label("Add Task", systemImage: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showingAddTask) {
+                AddTaskView()
+            }
         } detail: {
             Text("Select a task")
         }
