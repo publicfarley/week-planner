@@ -15,7 +15,7 @@ struct ContentView: View {
                     Label("Goals", systemImage: "target")
                 }
 
-            TaskListView()
+            WeeklyView()
                 .tabItem {
                     Label("Tasks", systemImage: "list.bullet")
                 }
